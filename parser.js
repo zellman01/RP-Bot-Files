@@ -326,7 +326,7 @@ exports.parse = {
 				if (spl[2] === 'Room Owners (#):') this.amphyVoices = spl[spl.length - 1].split(', ');
 				break;*/
 			case "html":
-				if (this.voidpoll){
+				if (this.voidpoll[room]){
 					delete this.voidpoll[room];
 					console.log(new Date().toString() + " "+ room.cyan + ': '.cyan + 'Poll has been voided.');
 					return this.say(room, "Poll's results have been voided.");
